@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    font-size: 1.25rem;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 50vh;
+}
+
+.intro{
+    padding-left: 2rem;
+    color: #7A6964;
+    background: linear-gradient(
+        #FA673F,
+        #FADA50);
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: section 1s;
+}
+
+.videobx {
+    background: linear-gradient(
+        #8D44FA,
+        #50E5FA);
+        border-radius: 82% 18% 85% 15% / 22% 81% 19% 78%;
+        transform: scaleX(-1);
+}
+
+.imgbx {
+    background: linear-gradient(
+        #FAC06C,
+        #CFFA43);
+        border-radius: 82% 18% 85% 15% / 22% 81% 19% 78%;
+}
+
+.greeting, .test {
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+.logos {
+    display: flex;
+}
+
+.logo:nth-child(2) {
+
+    transition-delay: 200ms;
+
+}
+.logo:nth-child(3) {
+
+    transition-delay: 400ms;
+
+}
+.logo:nth-child(4) {
+
+    transition-delay: 600ms;
+
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
